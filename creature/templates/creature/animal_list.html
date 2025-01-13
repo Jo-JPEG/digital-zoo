@@ -8,9 +8,11 @@
 <body>
     Wooow, look at these guys 
     {% for post in object_list %}
-    <h2>{{post.name}}</h2>
-    <p>{{post.description}}</p>
-    <p>Author: {{post.author}}</p>
+    <h2>{{post.name}} is a {{post.type}}</h2>
+    <p>Danger level: {{post.danger}}</p>
+    
+
+
     {% endfor %}
 </body>
 </html>
