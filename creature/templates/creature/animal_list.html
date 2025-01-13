@@ -6,12 +6,11 @@
     <title>The Creature are all here </title>
 </head>
 <body>
+
     Wooow, look at these guys 
     {% for post in object_list %}
     <h2>{{post.name}} is a {{post.type}}</h2>
     <p>Danger level: {{post.danger}}</p>
-    
-
 
     {% endfor %}
 </body>
