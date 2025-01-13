@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Animal
 
 # Create your views here.
-def index(request):
-    return HttpResponse("This is where the main page should be.")
+
+class AnimalList(generic.ListView):
+    model = Animal
