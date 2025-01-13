@@ -3,7 +3,13 @@
 
 
 <p>Here is {{ post.name }}</p>
-
+<p>It is a {{ post.type }}</p>
+<p>Some interesting facts about {{ post.name }} include:</p>
+<article>
+    {{ post.description | safe }}
+  </article>
+<p>Its danger level is {{ post.danger }}</p>
+<p>{{ post.name }} was last fed on {{ post.last_fed }}</p>
 
 
 {% endblock content %}
