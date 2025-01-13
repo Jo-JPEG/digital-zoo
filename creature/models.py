@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "hungry"), (1, "full"))
 
@@ -15,3 +16,4 @@ class Animal(models.Model):
     last_fed = models.DateTimeField()
     status = models.IntegerField(choices=STATUS, default=0)
     danger = models.IntegerField(default=0)
+    featured_image = CloudinaryField('image', default='placeholder')
