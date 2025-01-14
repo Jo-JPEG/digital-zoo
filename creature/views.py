@@ -16,11 +16,11 @@ def animal_detail(request, slug):
     **Context**
 
     ``post``
-        An instance of :model:`blog.Post`.
+        An instance of :model:`creature...`.
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`blog/animal_detail.html`
     """
 
     queryset = Animal.objects.all()
