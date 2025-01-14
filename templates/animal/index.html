@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 
-<div>
-    Wooow, look at these guys 
+<div class="the-goods">
+    Wooow, look at these guys
     {% for post in object_list %}
-    <h2>{{post.name}} is a {{post.type}}</h2>
-    <p>Danger level: {{post.danger}}</p>
-    <a href="{% url 'animal_detail' post.slug %}">look</a>
+    <div class="animal-box">
+        {% if "placeholder" in post.featured_image.url %}
+        <img class="small-pic" src="{% static 'images/placeholder.png' %}" alt="placeholder image">
+        {% else %}
+        <img class="small-pic" src=" {{ post.featured_image.url }}" alt="{{ post.name }}">
+        {% endif %}
+
+        <h2>{{post.name}} the {{post.type}}</h2>
+        <p>Danger level: {{post.danger}}</p>
+        <a href="{% url 'animal_detail' post.slug %}">Take a closer look</a>
+    </div>
+
     {% endfor %}
 
 
