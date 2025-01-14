@@ -1,3 +1,24 @@
 body {
     background-color: blueviolet;
 }
+
+.the-goods {
+    display: flex;
+}
+
+.small-pic {
+    height: 60px;
+    width: auto;
+}
+
+.animal-box {
+    background-color: hotpink;
+    border-color: darkgreen;
+    border-style: groove;
+    border-width: 5px;
+    border-radius: 5px;
+    max-width: 600px;
+    padding: 50px;
+    margin: 20px;
+
+}
