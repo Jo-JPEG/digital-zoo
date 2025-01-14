@@ -4,7 +4,15 @@ body {
 
 .the-goods {
     display: flex;
+    max-width: 1800px;
+    background-color: chartreuse;
+    flex-wrap: wrap;
 }
+
+/* .the-goods > div {
+    display: flex;
+
+} */
 
 .small-pic {
     height: 60px;

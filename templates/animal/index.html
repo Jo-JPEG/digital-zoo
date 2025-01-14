@@ -3,8 +3,10 @@
 
 {% block content %}
 
+<p>Let's see who's in the zoo today...</p>
+
 <div class="the-goods">
-    Wooow, look at these guys
+    <p>Wooow, look at these guys</p>
     {% for post in object_list %}
     <div class="animal-box">
         {% if "placeholder" in post.featured_image.url %}
@@ -13,7 +15,7 @@
         <img class="small-pic" src=" {{ post.featured_image.url }}" alt="{{ post.name }}">
         {% endif %}
 
-        <h2>{{post.name}} the {{post.type}}</h2>
+        <h3>{{post.name}} </h3> <p>the <span>{{post.type}}</span></p>
         <p>Danger level: {{post.danger}}</p>
         <a href="{% url 'animal_detail' post.slug %}">Take a closer look</a>
     </div>
