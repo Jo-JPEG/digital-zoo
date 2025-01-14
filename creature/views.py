@@ -7,7 +7,6 @@ from .models import Animal
 class AnimalList(generic.ListView):
     queryset = Animal.objects.all()
     template_name = "animal/index.html"
-    paginate_by = 6
 
 def animal_detail(request, slug):
     """
